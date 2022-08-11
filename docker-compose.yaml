@@ -1,0 +1,60 @@
+version: '3.7'
+services:
+  web:
+    container_name: php-container
+    build:
+      context: ./
+      dockerfile: DOCKERFILE
+    restart: always
+    ports:
+      - 85:80
+    volumes:
+      - ./sistema:/var/www/html     
+    networks:
+      - docker   
+
+  mysql:    
+    container_name: mysql-container
+    image: mysql:8.0
+    command: mysqld --default-authentication-plugin=mysql_native_password --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    restart: always    
+    environment:      
+      MYSQL_ROOT_PASSWORD: root     
+      MYSQL_HOST: localhost
+      MYSQL_DATABASE: useacabeca
+      MYSQL_USER: db_user
+      MYSQL_PASSWORD: db_user_pass
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"                            
+    ports: 
+      - '3306:3306'
+
+    volumes:
+      - './db/data:/var/lib/mysql'   
+      - './db/my.cnf:/etc/mysql/conf.d/my.cnf'
+      - './db/sql:/docker-entrypoint-initdb.d'
+
+    networks:
+      - docker
+  
+
+  phpmyadmin:
+      image: phpmyadmin
+      restart: always    
+      links:
+      - mysql    
+      environment:
+        PMA_HOST: mysql
+        PMA_PORT: 3306
+        PMA_ARBITRARY: 1
+      ports:
+        - "8080:80"      
+      depends_on:
+        - mysql
+      networks:  
+        - docker
+      
+networks:
+  docker:
+    driver: "bridge"        
+
+    
