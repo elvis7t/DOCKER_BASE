@@ -38,15 +38,15 @@ Com esse ambiente é possivel acessar um serviço web como um site por exemplo, 
 
     Para que seu banco já pronto seja exportado e instanciado:
     
-    Na pasta db/sql/001-create-database.sql   Sugiro exportar o banco de dados ja criado para um arquivo .sql, depois 
-    alterar seu nome para 001-create-database.sql e subistituir ele na pasta. 
+    Na pasta db/sql/001-create-database.sql   Sugiro exportar o banco de dados ja criado para um arquivo .sql, 
+    depois  alterar seu nome para 001-create-database.sql e subistituir ele na pasta. 
     
-    Remova os conainer e apague a pasta db/data antes de executar o docker-compose up -d novamente
+    Remova os container e apague a pasta db/data antes de executar o docker-compose up -d novamente
     
 
     ##Pasta com seu sistema web
-    A pasta sistema caso seja alterada para uma que contenha arquivos html, php etc.. é preciso mudar em 2 lugares, 
-    pois esse nome é a referencia, portanto altere em: 
+    A pasta sistema caso seja alterada para uma que contenha arquivos html, php etc.. 
+    é preciso mudar em 2 lugares, pois esse nome é a referencia, portanto altere em: 
     
     DOCKERFILE linha 3
     docker-compose.yaml linha 12
