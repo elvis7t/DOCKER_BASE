@@ -1,21 +1,21 @@
-# Ambiente de Desenvolvimento Web com Docker
+# Web Development Environment with Docker
 
 ##PHP 
 ##APACHE
 ##MYSQL
 ##PHPMYADMIN
 
-Com esse ambiente é possivel acessar um serviço web como um site por exemplo, com banco de dados Mysql já persistente e acesso a interface grafica do mysql
+With this environment it is possible to access a web service such as a website, for example, with a persistent Mysql database and access to the mysql graphical interface
 
-## Para acessar o ambiente seguir os paços abaixo:
+## To access the environment follow the steps below:
 
-1º clone o repositorio em seu comporador
+1º clone the repository in your folder
  - https://github.com/elvis7t/DOCKER_BASE.git
  
-2º Dentro da pasta DOCKER_BASE execute o comando 
+2º Inside the DOCKER_BASE folder run the command 
  - docker-compose up -d 
  
-3º Acessar os conteiners 
+3º Access the containers
 
  php-container
  - http://localhost:85/view/index.php
@@ -23,33 +23,33 @@ Com esse ambiente é possivel acessar um serviço web como um site por exemplo, 
  phpmyadmin(Interface Mysql)
  - http://localhost:8080/index.php
     
-    Servidor: msql
+    Server: msql
     
-    Utilizador: db_user
+    User: db_user
     
-    Palavra-passe: db_pass
+    Password: db_pass
 
- ## Para ajustar esse ambiente a sua necessidade siga os passos abaixo:
+ ## To adjust this environment to your needs, follow the steps below:
   
-    ##Banco de dados 
-    Altere os seguintes arquivos:
-    db/sql/init-database.sh mudar o nome do banco que esta como "useacabeca"
-    e no docker-compose.yaml linha 24
+   ##Database
+    Change the following files:
+    db/sql/init-database.sh change the name of the bank that is like "useacabeca"
+    and in docker-compose.yaml line 24
 
-    Para que seu banco já pronto seja exportado e instanciado:
+    In order for your ready-made database to be exported and instantiated:
     
-    Na pasta db/sql/001-create-database.sql   Sugiro exportar o banco de dados ja criado para um arquivo .sql, 
-    depois  alterar seu nome para 001-create-database.sql e subistituir ele na pasta. 
+    In the db/sql/001-create-database.sql folder I suggest exporting the already created database to a .sql file,
+    then change its name to 001-create-database.sql and replace it in the folder.
     
-    Remova os container e apague a pasta db/data antes de executar o docker-compose up -d novamente
+    Remove the containers and delete the db/data folder before running docker-compose up -d again
     
 
-    ##Pasta com seu sistema web
-    A pasta sistema caso seja alterada para uma que contenha arquivos html, php etc.. 
-    é preciso mudar em 2 lugares, pois esse nome é a referencia, portanto altere em: 
+    ##Folder with your web system
+    The system folder if changed to one containing html, php etc files..
+    it is necessary to change in 2 places, because this name is the reference, so change it in:
     
-    DOCKERFILE linha 3
-    docker-compose.yaml linha 12
+    DOCKERFILE line 3
+    docker-compose.yaml line 12
 
 
 
