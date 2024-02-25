@@ -9,7 +9,7 @@ services:
     ports:
       - 85:80
     volumes:
-      - ./sistema:/var/www/html     
+      - ./app:/var/www/html     
     networks:
       - docker   
 
