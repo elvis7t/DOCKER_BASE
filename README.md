@@ -39,7 +39,7 @@ With this environment it is possible to access a web service such as a website, 
     In order for your ready-made database to be exported and instantiated:
     
     In the db/sql/001-create-database.sql folder I suggest exporting the already created database to a .sql file,
-    then change its name to 001-create-database.sql and replace it in the folder.
+    then change its name to 001-create-tables.sql and replace it in the folder.
     
     Remove the containers and delete the db/data folder before running docker-compose up -d again
     
