@@ -33,7 +33,7 @@ With this environment it is possible to access a web service such as a website, 
   
    ##Database
     Change the following files:
-    db/sql/init-database.sh change the name of the bank that is like "useacabeca"
+    db/migrations/init-database.sh change the name of the bank that is like "useacabeca"
     and in docker-compose.yaml line 24
 
     In order for your ready-made database to be exported and instantiated:
