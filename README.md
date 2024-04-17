@@ -22,21 +22,18 @@ docker-compose up -d
  php-container
  - http://localhost:85/view/index.php
 
- phpmyadmin(Interface Mysql)
+ phpmyadmin(Mysql Interface)
  - http://localhost:8080/index.php
-    
-    Server: msql
-    
-    User: db_user
-    
+    Login :
+    Server: msql    
+    User: db_user    
     Password: db_pass
-
- ## To adjust this environment to your needs, follow the steps below:
-  
-   ##Database
+---
+ ## Database
     Change the following files:
-    db/migrations/init-database.sh change the name of the bank that is like "useacabeca"
-    and in docker-compose.yaml line 24
+    
+    * db/migrations/init-database.sh change the name of the bank that is like "useacabeca"
+    * docker-compose.yaml line 24
 
     In order for your ready-made database to be exported and instantiated:
     
