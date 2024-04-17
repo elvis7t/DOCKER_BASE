@@ -24,11 +24,12 @@ docker-compose up -d
 
  phpmyadmin(Mysql Interface)
  - http://localhost:8080/index.php
+   
     Login :
     Server: msql    
     User: db_user    
     Password: db_pass
--- 
+    
  ## Database
 Change the following files:
 * db/migrations/init-database.sh change the name of the bank that is like "useacabeca";
