@@ -10,11 +10,13 @@ With this environment it is possible to access a web service such as a website, 
 ## To access the environment follow the steps below:
 
 1º clone the repository in your folder
- - https://github.com/elvis7t/DOCKER_BASE.git
- 
+```
+ git clone https://github.com/elvis7t/DOCKER_BASE.git
+```
 2º Inside the DOCKER_BASE folder run the command 
- - docker-compose up -d 
- 
+```
+docker-compose up -d
+``` 
 3º Access the containers
 
  php-container
