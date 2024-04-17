@@ -31,7 +31,7 @@ docker-compose up -d
     User: db_user    
     Password: db_pass
     
- ## Database
+ ## Change the Database to your aplication
 Change the following files:
 * db/migrations/init-database.sh change the name of the bank that is like "useacabeca";
 * docker-compose.yaml line 24;
