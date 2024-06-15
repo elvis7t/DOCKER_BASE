@@ -27,7 +27,7 @@ docker-compose up -d
    
     Login :
    
-    Server: msql    
+    Server: mysql    
     User: db_user    
     Password: db_pass
     
